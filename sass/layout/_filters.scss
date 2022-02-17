@@ -1,0 +1,12 @@
+.filters-list {
+  display: flex;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+
+  & .item {
+    display: flex;
+    margin-left: 8px;
+  }
+}

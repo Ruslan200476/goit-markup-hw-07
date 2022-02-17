@@ -1,0 +1,26 @@
+.button.secondary:hover,
+.button.secondary:focus {
+  color: var(--secondary-text-color);
+  background-color: #188ce8;
+}
+
+.button.primary {
+  padding: 6px 22px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  letter-spacing: 0.03em;
+  background-color: var(--background-color-btn);
+  color: var(--title-text-color);
+
+  transition: color var(--transition), background-color var(--transition),
+    box-shadow var(--transition);
+    
+  &:hover,
+  &:focus {
+    background-color: var(--akcent-text-color);
+    color: var(--secondary-text-color);
+    box-shadow: var(--filters-button-shadows);
+  }
+}

@@ -1,0 +1,30 @@
+.customers-list {
+  display: flex;
+  justify-content: center;
+  fill: var(--socials-icons-color);
+}
+.customers-link {
+  width: 170px;
+  height: 92px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--socials-icons-color);
+  color: var(--socials-icons-color);
+
+  transition: color var(--transition), border var(--transition);
+  &:hover,
+&:focus {
+  color: var(--akcent-text-color);
+  border-color: var(--akcent-text-color);
+}
+}
+.customers-icon {
+  fill: currentColor;
+}
+
+.customers-item:not(:last-child) {
+  margin-right: 30px;
+}
