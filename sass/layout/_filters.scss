@@ -1,11 +1,11 @@
 .filters-list {
   display: flex;
+  justify-content: center;
+  margin-right: auto;
   margin-bottom: 50px;
   margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-
-  & .item {
+  
+  & .filters-list__item {
     display: flex;
     margin-left: 8px;
   }
