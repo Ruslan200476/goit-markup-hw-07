@@ -18,71 +18,29 @@
 .nav {
   display: flex;
   margin-right: auto;
-}
-.nav-list {
-  display: flex;
-  margin-left: 94px;
-}
-/* .site-nav .item:not(:last-child) {
-  margin-right: 50px;} */
-.nav__item + .nav__item {
-  margin-left: 50px;
-}
-.nav__link {
-  display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-  color: var(--title-text-color);
 
-  transition: color var(--transition);
-}
-
-/*-------------- Contacts --------------*/
-.contacts {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  margin-left: auto;
-}
-.contacts__item {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  transition: color var(--transition);
-
-  & + & {
-    margin-left: 30px;
+  .nav-list {
+    display: flex;
+    margin-left: 94px;
   }
-}
 
-.contacts__icon {
-  fill: currentColor;
-  margin-right: 10px;
-}
-.contacts__link {
-  text-decoration: none;
-  color: var(--primary-text-color);
-  &:hover,
-  &:focus {
+  .nav__item + .nav__item {
+    margin-left: 50px;
+  }
+  .nav__link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include font(500, 14px, 16px, 0.02em);
+    color: var(--title-text-color);
+
+    transition: color var(--transition);
+  }
+  .nav__link--current {
     color: var(--akcent-text-color);
+    position: relative;
   }
-}
-.current {
-  color: var(--akcent-text-color);
-  position: relative;
-
-  &::after {
+  .nav__link--current::after {
     content: "";
     width: 100%;
     height: 4px;
@@ -93,5 +51,36 @@
     border-radius: 2px;
 
     transition: background-color var(--transition);
+  }
+}
+
+/*-------------- Contacts --------------*/
+.contacts {
+  @extend %aline-list;
+  margin-left: auto;
+
+  .contacts__item {
+    @extend %aline-list;
+    @include font(500, 14px, 16px, 0.02em);
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    transition: color var(--transition);
+  }
+  .contacts__item + .contacts__item {
+    margin-left: 30px;
+  }
+
+  .contacts__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+  .contacts__link {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    &:hover,
+    &:focus {
+      color: var(--akcent-text-color);
+    }
   }
 }

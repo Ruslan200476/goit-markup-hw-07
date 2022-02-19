@@ -2,23 +2,21 @@
   margin-right: auto;
   padding-top: 24px;
   padding-bottom: 25px;
-}
-.logo__item {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
-  color: var(--akcent-text-color);
 
-  .logo__black {
-    color: rgba(0, 0, 0, 1);
+  .logo__item {
+    font-family: "Raleway", sans-serif;
+    @include font(700, 26px, 31px, nule);
+    color: var(--akcent-text-color);
   }
 }
-.logo__footer {
+
+.logo__black {
+  color: rgba(0, 0, 0, 1);
+}
+.logo--indents {
   padding: 0;
   margin-bottom: 20px;
 }
-.logo__white {
-  background-color: var(--background-color-footer);
+.logo__black--inversion {
   color: rgba(255, 255, 255, 1);
 }

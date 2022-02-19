@@ -19,10 +19,7 @@
   .hero__title {
     margin-top: 0;
     margin-bottom: 30px;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: calc(60 / 44);
-    letter-spacing: 0.06em;
+    @include font(900, 44px, 60px, 0.06em);
     text-transform: uppercase;
     color: var(--secondary-text-color);
   }
@@ -31,10 +28,7 @@
 .button.secondary {
   padding: 10px 32px;
   font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.06em;
+  @include font(700, 16px, 30px, 0.06em);
   color: var(--secondary-text-color);
   background-color: var(--akcent-text-color);
 

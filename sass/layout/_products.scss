@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  & .products-item {
+  & .products-list__item {
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
@@ -10,27 +10,19 @@
     border: 1px solid #eeeeee;
     box-sizing: border-box;
   }
-  & .products-item:nth-child(3n) {
+  & .products-list__item:nth-child(3n) {
     margin-right: 0;
   }
-  & .products-item:nth-last-child(-n + 3) {
+  & .products-list__item:nth-last-child(-n + 3) {
     margin-bottom: 0;
   }
 }
 
-/* ---------Альтернатива обнуления --------*/
-/* .activities-list .item:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
-.activities-list .item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
-} */
-
-.products-item__wrap {
+.products-list__wrap {
   position: relative;
   overflow: hidden;
 }
-.products-item__article {
+.products-list__article {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -44,11 +36,11 @@
   transform: translateY(100%);
   transition: transform 250ms linear;
 }
-.products-item__link {
+.products-list__link {
   display: block;
   transition: box-shadow var(--transition);
 
-  &:hover .products-item__article {
+  &:hover .products-list__article {
     transform: translateY(0%);
   }
   &:hover,
@@ -57,20 +49,17 @@
   }
 }
 
-.products-item__title {
+.products-list__title {
   margin-bottom: 4px;
-
-  font-weight: 700;
-  font-size: 18px;
-  line-height: calc(36 / 18);
-  letter-spacing: 0.06em;
+  @include font(700, 18px, 36px, 0.06em);
   color: var(--title-text-color);
 }
-.products-item__text {
+.products-list__text {
+  @include font(nule, 16px, 30px, nule);
   font-size: 16px;
   line-height: calc(30 / 16);
   color: var(--primary-text-color);
 }
-.products-item__box {
+.products-list__box {
   padding: 20px 24px;
 }
