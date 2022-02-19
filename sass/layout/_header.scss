@@ -62,8 +62,6 @@
   .contacts__item {
     @extend %aline-list;
     @include font(500, 14px, 16px, 0.02em);
-    padding-top: 32px;
-    padding-bottom: 32px;
 
     transition: color var(--transition);
   }
@@ -76,6 +74,10 @@
     margin-right: 10px;
   }
   .contacts__link {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
     text-decoration: none;
     color: var(--primary-text-color);
     &:hover,

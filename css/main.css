@@ -527,8 +527,6 @@ body {
   font-size: 14px;
   line-height: calc($lh / $fz);
   letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
   transition: color var(--transition);
 }
 
@@ -542,6 +540,10 @@ body {
 }
 
 .contacts .contacts__link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
   text-decoration: none;
   color: var(--primary-text-color);
 }
@@ -684,7 +686,8 @@ body {
 .team .team-item__title {
   font-weight: 500;
   font-size: 16px;
-  line-height: calc(19 / 16);
+  line-height: calc($lh / $fz);
+  letter-spacing: nule;
   text-align: center;
   margin-bottom: 10px;
   color: var(--title-text-color);
@@ -692,8 +695,10 @@ body {
 
 .team .team-item__text {
   margin-bottom: 16px;
-  font-size: 16px;
-  line-height: calc(19 / 16);
+  font-weight: nule;
+  font-size: 19px;
+  line-height: calc($lh / $fz);
+  letter-spacing: nule;
   text-align: center;
   color: var(--primary-text-color);
 }

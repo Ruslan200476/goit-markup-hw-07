@@ -25,7 +25,7 @@
   }
   .team-item__text {
     margin-bottom: 16px;
-    @include font(nule 19px, 16px, nule);
+    @include font(nule, 19px, 16px, nule);
     text-align: center;
     color: var(--primary-text-color);
   }
